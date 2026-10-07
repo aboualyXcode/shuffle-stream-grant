@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shuffle, Stream &amp; Grant: hands-on Databricks engineering</title>
+  <meta name="description" content="29 hands-on challenges in the browser: tune Spark jobs, configure Structured Streaming and Lakeflow pipelines, and secure data with Unity Catalog and Asset Bundles.">
+  <meta name="theme-color" content="#11151b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Martian+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-lab="shuffle">
+  <header class="top">
+    <a class="brand" href="./"><img src="assets/favicon.svg" alt="" width="26" height="26"><span>Shuffle, Stream <i>&amp;</i> Grant</span></a>
+    <nav class="labs" aria-label="Labs">
+      <button type="button" class="lab-tab" data-lab="shuffle"><b>Shuffle</b><span>Spark performance</span></button>
+      <button type="button" class="lab-tab" data-lab="stream"><b>Stream</b><span>Streaming &amp; Lakeflow</span></button>
+      <button type="button" class="lab-tab" data-lab="grant"><b>Grant</b><span>Unity Catalog &amp; bundles</span></button>
+    </nav>
+    <div class="progress"><span id="progress-text"></span><span class="bar"><i id="progress-bar"></i></span></div>
+    <a class="guide" href="https://github.com/aboualyXcode/shuffle-stream-grant/tree/main/docs" target="_blank" rel="noopener">Guide ↗</a>
+  </header>
+
+  <div class="layout">
+    <nav class="side" aria-label="Challenges"><ol id="list"></ol></nav>
+    <main class="main">
+      <section class="brief card" aria-labelledby="title">
+        <div class="meta"><span id="lab-name" class="lab-name"></span><span id="level" class="pill"></span><span id="status" class="pill"></span></div>
+        <h1 id="title"></h1>
+        <p id="scenario" class="scenario"></p>
+        <div id="task" class="task"></div>
+        <div id="help" class="help"></div>
+      </section>
+      <section id="workspace" class="workspace" aria-label="Workspace"></section>
+      <section id="verdict" class="verdict" aria-live="polite" hidden></section>
+    </main>
+  </div>
+
+  <script src="js/yaml.js"></script>
+  <script src="js/shuffle/model.js"></script>
+  <script src="js/shuffle/challenges.js"></script>
+  <script src="js/stream/engine.js"></script>
+  <script src="js/stream/challenges.js"></script>
+  <script src="js/grant/uc.js"></script>
+  <script src="js/grant/bundles.js"></script>
+  <script src="js/grant/challenges.js"></script>
+  <script src="js/ui/app.js"></script>
+</body>
+</html>
