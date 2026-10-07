@@ -1,0 +1,23 @@
+# Runs every simulator test and checks that every challenge is sound.
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Streaming simulator
+        run: node tests/stream.test.js
+      - name: Unity Catalog and Asset Bundles
+        run: node tests/grant.test.js
+      - name: Spark model
+        run: node tests/shuffle.test.js
+      - name: Every challenge is sound
+        run: node tests/challenges.test.js
